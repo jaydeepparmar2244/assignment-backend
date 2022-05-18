@@ -10,7 +10,7 @@
       table.date('borrowDate');
       table.date('returnDate');
     //   table.foreign('borrowedBy').references('id');
-      table.bigInteger('borrowedBy').unsigned().index().references('id').inTable('students');
+      table.string('borrowedBy').unsigned().index().references('firstName').inTable('students').nullable();
     });
   };
 /**
